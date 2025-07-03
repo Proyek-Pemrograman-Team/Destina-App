@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="Register.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <h1 class="logo"><img src="Asset/Logo.png" alt=""></h1>
+        <div class="login-box">
+            <h2>Sign Up</h2>
+            <form action="php/register.php" method="POST" onsubmit="return validatePassword();">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Username@gmail.com" required />
+
+                <label for="password">Password</label>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="************" required />
+                    <span class="eye-icon" onclick="togglePassword('password', this)">
+                        <img src="Asset/icon-eye.png" width="20" height="auto">
+                    </span>
+                </div>
+
+                <label for="confirm_password">Re-enter Password</label>
+                <div class="input-group">
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="************"
+                        required />
+                    <span class="eye-icon" onclick="togglePassword('confirm_password', this)">
+                        <img src="Asset/icon-eye-hide.png" width="20" height="auto">
+                    </span>
+                </div>
+
+                <button type="submit" class="btn-signup">Sign Up</button>
+                <button type="button" class="btn-cancel" onclick="window.location.href='login.html'">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            var pass = document.getElementById("password").value;
+            var confirm = document.getElementById("confirm_password").value;
+            if (pass !== confirm) {
+                alert("Password dan konfirmasi password tidak cocok.");
+                return false;
+            }
+            return true;
+        }
+
+        function togglePassword(inputId, element) {
+            const input = document.getElementById(inputId);
+            const img = element.querySelector('img');
+            if (input.type === "password") {
+                input.type = "text";
+                img.src = "Asset/icon-eye-hide.png";
+            } else {
+                input.type = "password";
+                img.src = "Asset/icon-eye.png";
+            }
+        }
+    </script>
+</body>
+
+</html>

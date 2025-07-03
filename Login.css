@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.login-box {
+    background: #104B71;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    text-align: center;
+    color: #fff;
+}
+
+.logo {
+    font-size: 32px;
+    color: #4daaa7;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.forgot {
+    display: block;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-btn,
+.create-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #F9F7F3;
+    color: black;
+}
+
+.create-btn {
+    background-color: #CAF0F8;
+    color: black;
+}
+
+.divider {
+    margin: 10px 0px;
+    border-top: 1px solid #fff;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+
+.divider::after {
+    content: "or";
+    position: absolute;
+    background: #104B71;
+    padding: 0px 10px;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
